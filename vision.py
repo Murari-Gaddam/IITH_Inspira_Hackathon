@@ -48,8 +48,7 @@ class FocusTracker:
 
         mp_face_mesh = mp.solutions.face_mesh
         face_mesh = mp_face_mesh.FaceMesh(refine_landmarks=True, max_num_faces=1)
-        camera_url = "http://10.5.109.39:8080/video" 
-        cap = cv2.VideoCapture(camera_url)
+        cap = cv2.VideoCapture(0)
 
         try:
             while not self._stop_event.is_set():
